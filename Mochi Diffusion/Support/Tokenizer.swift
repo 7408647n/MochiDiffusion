@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import StableDiffusion
+@preconcurrency import StableDiffusion
 
-final class Tokenizer {
+final class Tokenizer: Sendable {
     private let bpeTokenizer: BPETokenizer
 
     init?(modelDir: URL) {

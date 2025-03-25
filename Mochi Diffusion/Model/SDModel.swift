@@ -11,7 +11,7 @@ import os.log
 
 private let logger = Logger()
 
-struct SDModel: Identifiable {
+struct SDModel: Identifiable, Sendable {
     let url: URL
     let name: String
     let attention: SDModelAttentionType
